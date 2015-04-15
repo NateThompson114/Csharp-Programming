@@ -10,13 +10,21 @@ using System.Windows.Forms;
 
 namespace Csharp_Windows_Form_App___Browser
 {
-    public partial class Form1 : Form
+    
+    public partial class UDEMY_Browser : Form
     {
-        public Form1()
+        public UDEMY_Browser()
         {
             InitializeComponent();
             url.Text = "https://www.google.com";
             webBrowser.Navigate(new Uri(url.Text));
+            Text = @"UDEMY Browser";
+        }
+
+        public override sealed string Text
+        {
+            get { return base.Text; }
+            set { base.Text = value; }
         }
 
         private void load_Click(object sender, EventArgs e)
@@ -32,6 +40,11 @@ namespace Csharp_Windows_Form_App___Browser
         private void forwardButton_Click(object sender, EventArgs e)
         {
             webBrowser.GoForward();
+        }
+
+        private void youTubeButton_Click(object sender, EventArgs e)
+        {
+            webBrowser.Navigate("https://www.youtube.com");
         }
         
         

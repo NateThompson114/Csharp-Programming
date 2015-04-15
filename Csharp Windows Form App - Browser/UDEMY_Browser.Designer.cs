@@ -1,6 +1,6 @@
 ﻿namespace Csharp_Windows_Form_App___Browser
 {
-    partial class Form1
+    partial class UDEMY_Browser
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.load = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
+            this.youTubeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // webBrowser
@@ -41,9 +42,9 @@
             this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser.Location = new System.Drawing.Point(1, 36);
+            this.webBrowser.Location = new System.Drawing.Point(1, 62);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(971, 714);
+            this.webBrowser.Size = new System.Drawing.Size(971, 688);
             this.webBrowser.TabIndex = 6;
             // 
             // url
@@ -101,20 +102,32 @@
             this.forwardButton.UseVisualStyleBackColor = true;
             this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
-            // Form1
+            // youTubeButton
+            // 
+            this.youTubeButton.Location = new System.Drawing.Point(1, 33);
+            this.youTubeButton.Name = "youTubeButton";
+            this.youTubeButton.Size = new System.Drawing.Size(75, 23);
+            this.youTubeButton.TabIndex = 7;
+            this.youTubeButton.Text = "YouTube";
+            this.youTubeButton.UseVisualStyleBackColor = true;
+            this.youTubeButton.Click += new System.EventHandler(this.youTubeButton_Click);
+            // 
+            // UDEMY_Browser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(973, 750);
+            this.Controls.Add(this.youTubeButton);
             this.Controls.Add(this.forwardButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.load);
             this.Controls.Add(this.urlLabel);
             this.Controls.Add(this.url);
             this.Controls.Add(this.webBrowser);
-            this.MinimumSize = new System.Drawing.Size(600, 0);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MinimumSize = new System.Drawing.Size(600, 38);
+            this.Name = "UDEMY_Browser";
+            this.Text = "UDEMY_Browser";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +141,7 @@
         private System.Windows.Forms.Button load;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button forwardButton;
+        private System.Windows.Forms.Button youTubeButton;
     }
 }
 

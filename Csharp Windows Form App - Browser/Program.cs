@@ -16,7 +16,7 @@ namespace Csharp_Windows_Form_App___Browser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new UDEMY_Browser());
         }
     }
 }

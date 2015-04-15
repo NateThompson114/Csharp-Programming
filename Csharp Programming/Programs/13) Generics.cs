@@ -8,7 +8,7 @@ namespace Csharp_Programming.Programs
 {
     class _13__Generics<T>
     {
-        private T x;
+        private T x; //
 
         public _13__Generics(T val)
         {

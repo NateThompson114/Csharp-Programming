@@ -14,5 +14,10 @@ namespace Csharp_Programming.Programs
         {
             x = val;
         }
+
+        public T Get()
+        {
+            return x;
+        }
     }
 }

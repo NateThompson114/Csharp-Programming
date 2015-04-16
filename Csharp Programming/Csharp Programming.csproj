@@ -57,6 +57,7 @@
     <Compile Include="Programs\10%29 Conditional Functions.cs" />
     <Compile Include="Programs\12%29  File Information.cs" />
     <Compile Include="Programs\13%29 Generics.cs" />
+    <Compile Include="Programs\14%29 List with User Control.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

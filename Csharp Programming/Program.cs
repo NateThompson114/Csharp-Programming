@@ -32,8 +32,10 @@ namespace Csharp_Programming
             Console.WriteLine("10. Conditional Functions");
             Console.WriteLine("11. Using a Dynamic Link Library");
             Console.WriteLine("12. Get File Information for Desktop");
-            Console.WriteLine("13. Generics");
-            Console.WriteLine("14. BLANK");
+            Console.WriteLine("13. Generic List");
+            Console.WriteLine("14. List with user controls");
+            Console.WriteLine("15. Generic Interface");
+            Console.WriteLine("16. BLANK");
             var result = Console.ReadLine();
             try
             {
@@ -188,8 +190,26 @@ namespace Csharp_Programming
                     case 14:
                         var cl = new _14__List_with_User_Control();
                         cl.carInfo();
-                        
-    
+                       
+                        ender(1);
+                        break;
+
+                    case 15:
+                        var gi = new _15_Generic_Interface_User<int>();
+                        gi.Show();
+
+                        ender(1);
+                        break;
+
+                    case 16:
+
+                        var dictonaryExample = new Dictionary<string, string>();
+                        dictonaryExample.Add("First", Console.ReadLine());
+                        dictonaryExample.Add("Second", Console.ReadLine());
+
+                        Console.WriteLine("The value stored under key first is {0}",dictonaryExample["First"]);
+                        Console.WriteLine("The value stored under key second is {0}",dictonaryExample["Second"]);
+
                         ender(1);
                         break;
 

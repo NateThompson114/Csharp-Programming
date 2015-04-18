@@ -35,7 +35,9 @@ namespace Csharp_Programming
             Console.WriteLine("13. Generic List");
             Console.WriteLine("14. List with user controls");
             Console.WriteLine("15. Generic Interface");
-            Console.WriteLine("16. BLANK");
+            Console.WriteLine("16. Generic Dictonary");
+            Console.WriteLine("17. Lambda Expressions");
+            Console.WriteLine("18. BLANK");
             var result = Console.ReadLine();
             try
             {
@@ -212,12 +214,6 @@ namespace Csharp_Programming
 
                         
                         var de = new _16__Generic_Dictionarie.multiLineMessenger();
-                        /*
-                        var deInput = Console.ReadLine();
-                        Console.WriteLine(de.encryptor(deInput));
-                        
-                        Console.WriteLine("Decrypting {0} results in string {1}",de.encryptor(deInput),de.decryptor(de.encryptor(deInput)));
-                         */
 
                         Console.WriteLine("Input a sentence you would like to \"encrypt\"");
                         var deInput = de.multiLine(Console.ReadLine(), true);
@@ -225,6 +221,34 @@ namespace Csharp_Programming
                         Console.WriteLine();
                         Console.WriteLine("Decrypting");
                         Console.WriteLine(de.multiLine(deInput,false));
+
+                        ender(1);
+                        break;
+
+                    case 17:
+                        Func<String> myFunc = () => "Hello World";
+                        Console.WriteLine("myFunc returns {0}",myFunc());
+                        
+                        Func<int, int, int> myFunc2 = (int aa, int bb) =>(aa + bb);
+                        Console.WriteLine("The sum of 4 and 10 is {0}", myFunc2(4, 10));
+
+                        var ld = new _17__Lambda();
+
+                        var myFunc3 = ld.Adder();
+                        var myFunc4 = ld.Square();
+                        
+                        Console.WriteLine("My variable of {0} store in the ld class, modified by lambda my var becomes {1} when run through added and {2} when squared",ld.Get(),myFunc3(),myFunc4(ld.Get()));
+
+                        var ldn1 = numberGen.Next(10) + numberGen.NextDouble();
+                        var ldn2 = numberGen.Next(10) + numberGen.NextDouble();
+                        var ldn3 = numberGen.Next(4);
+
+                        dynamic xx = ld.Divide(ldn1, ldn2, ldn3);
+                        dynamic yy = ld.Multiply(ldn1, ldn2, ldn3);
+
+                        Console.WriteLine("{0} / {1} then rounded to {2} decimals = {3}", ldn1, ldn2, ldn3, xx);
+                        Console.WriteLine("{0} x {1} then rounded to {2} decimals = {3}", ldn1, ldn2, ldn3, yy);
+
 
                         ender(1);
                         break;

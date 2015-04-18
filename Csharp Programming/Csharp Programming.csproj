@@ -60,6 +60,7 @@
     <Compile Include="Programs\14%29 List with User Control.cs" />
     <Compile Include="Programs\15 Generic Interface User.cs" />
     <Compile Include="Programs\15%29 Generic Interface.cs" />
+    <Compile Include="Programs\16%29 Generic Dictionarie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

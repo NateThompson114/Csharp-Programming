@@ -203,12 +203,28 @@ namespace Csharp_Programming
 
                     case 16:
 
-                        var dictonaryExample = new Dictionary<string, string>();
-                        dictonaryExample.Add("First", Console.ReadLine());
-                        dictonaryExample.Add("Second", Console.ReadLine());
+                        //var dictonaryExample = new Dictionary<string, string>();
+                        //dictonaryExample.Add("First", Console.ReadLine());
+                        //dictonaryExample.Add("Second", Console.ReadLine());
 
-                        Console.WriteLine("The value stored under key first is {0}",dictonaryExample["First"]);
-                        Console.WriteLine("The value stored under key second is {0}",dictonaryExample["Second"]);
+                        //Console.WriteLine("The value stored under key first is {0}",dictonaryExample["First"]);
+                        //Console.WriteLine("The value stored under key second is {0}",dictonaryExample["Second"]);
+
+                        
+                        var de = new _16__Generic_Dictionarie.multiLineMessenger();
+                        /*
+                        var deInput = Console.ReadLine();
+                        Console.WriteLine(de.encryptor(deInput));
+                        
+                        Console.WriteLine("Decrypting {0} results in string {1}",de.encryptor(deInput),de.decryptor(de.encryptor(deInput)));
+                         */
+
+                        Console.WriteLine("Input a sentence you would like to \"encrypt\"");
+                        var deInput = de.multiLine(Console.ReadLine(), true);
+                        Console.WriteLine(deInput);
+                        Console.WriteLine();
+                        Console.WriteLine("Decrypting");
+                        Console.WriteLine(de.multiLine(deInput,false));
 
                         ender(1);
                         break;

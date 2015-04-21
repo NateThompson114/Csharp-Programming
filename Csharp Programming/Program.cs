@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using Csharp_Programming.Programs;
@@ -37,7 +38,9 @@ namespace Csharp_Programming
             Console.WriteLine("15. Generic Interface");
             Console.WriteLine("16. Generic Dictonary");
             Console.WriteLine("17. Lambda Expressions");
-            Console.WriteLine("18. BLANK");
+            Console.WriteLine("18. Serialization");
+            Console.WriteLine("19. Event Log");
+            Console.WriteLine("20. BLANK");
             var result = Console.ReadLine();
             try
             {
@@ -66,7 +69,7 @@ namespace Csharp_Programming
                         var mdInput = Console.ReadLine();
                         md.MulticastDelegates(int.Parse(string.IsNullOrEmpty(mdInput)?"4":mdInput));
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 2:
@@ -75,7 +78,7 @@ namespace Csharp_Programming
                         var acInput = Console.ReadLine();
                         ac.ActionCenter(double.Parse(string.IsNullOrEmpty(acInput)?"4":acInput));
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 3:
@@ -89,14 +92,14 @@ namespace Csharp_Programming
                         dm.DoMath(int.Parse(string.IsNullOrEmpty(x) ? "4" : x),
                             int.Parse(string.IsNullOrEmpty(y) ? "4" : y));
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 4:
                         var iProgram = new _04__Interface();
                         iProgram.ChairMessage();
                         
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 5:
@@ -105,28 +108,28 @@ namespace Csharp_Programming
                         var iIFinput = Console.ReadLine();
                         iIF.mySquare(double.Parse(string.IsNullOrEmpty(iIFinput)?"5.6":iIFinput));
                         
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 6:
                         var am = new _06__Access_Modifiers();
                         am.modifier();
                         
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 7:
                         _07__Destructors samp = new _07__Destructors();
                         samp.timerSam();
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 8:
                         var sb = new _08__String_Basics();
                         sb.stringBasics();
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 9:
@@ -135,7 +138,7 @@ namespace Csharp_Programming
 
                         Console.WriteLine("The name of the person is {0}", newemp.GetFirst());
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 10:
@@ -143,7 +146,7 @@ namespace Csharp_Programming
                         trace.Trace("This will only run in Debug Mode");
                         
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 11:
@@ -167,14 +170,14 @@ namespace Csharp_Programming
                         Console.WriteLine("{0} + {1} = {2}",a,b,subtracted);
                         Console.WriteLine("Adding {0},{1},{2},{3},{4},{5},{6} and {7} equals {8}",c,d,e,f,g,h,i,j,massAdd.Add(c,d,e,f,g,h,i,j));
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 12:
                         var fl = new _12___File_Information();
                         fl.Files();
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 13:
@@ -186,21 +189,21 @@ namespace Csharp_Programming
                         var y2 = gl2.Get();
                         Console.WriteLine("The value of y2 is {0}", y2);
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 14:
                         var cl = new _14__List_with_User_Control();
                         cl.carInfo();
                        
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 15:
                         var gi = new _15_Generic_Interface_User<int>();
                         gi.Show();
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 16:
@@ -222,11 +225,11 @@ namespace Csharp_Programming
                         Console.WriteLine("Decrypting");
                         Console.WriteLine(de.multiLine(deInput,false));
 
-                        ender(1);
+                        Ender(1);
                         break;
 
                     case 17:
-                        Func<String> myFunc = () => "Hello World";
+                        Func<string> myFunc = () => "Hello World";
                         Console.WriteLine("myFunc returns {0}",myFunc());
                         
                         Func<int, int, int> myFunc2 = (int aa, int bb) =>(aa + bb);
@@ -250,25 +253,59 @@ namespace Csharp_Programming
                         Console.WriteLine("{0} x {1} then rounded to {2} decimals = {3}", ldn1, ldn2, ldn3, yy);
 
 
-                        ender(1);
+                        Ender(1);
+                        break;
+
+                    case 18:
+                        var file = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) +
+                                      @"\person.person";
+
+                        var per = new _18__Person("smith", "john");
+                        Stream writeoject =
+                            File.Create(file);
+                        BinaryFormatter nbf = new BinaryFormatter();
+                        nbf.Serialize(writeoject,per);
+                        writeoject.Close();
+
+                        Stream readObject = File.OpenRead(file);
+                        var newper2 = (_18__Person) nbf.Deserialize(readObject);
+                        readObject.Close();
+
+                        Console.WriteLine("The file, person.person contains the name {0} {1}",newper2.fname,newper2.lname);
+
+                        Ender(1);
+                        break;
+
+                    case 19:
+
+                        var sourceofevent = "Simple Console App";
+                        var logName = "Application";
+                        var logmessage = "The simple console app has executed.";
+                        if (!EventLog.SourceExists(sourceofevent))
+                        {
+                            EventLog.CreateEventSource(sourceofevent,logName);
+                        }
+                        EventLog.WriteEntry(sourceofevent,logmessage,EventLogEntryType.Information);
+
+                        Ender(1);
                         break;
 
                     default:
                         Console.WriteLine("No option found");
-                        ender(0);
+                        Ender(0);
                         break;
                 }
                 conkey = Console.ReadKey();
             } while (conkey.Key != ConsoleKey.Escape);
         }
 
-        public static string ender(int addToTest)
+        public static string Ender(int addToTest)
         {
 
             Console.WriteLine();
             Console.WriteLine("Press ESC to exit or any other key to continue");
             Console.WriteLine();
-            testNum+= addToTest;
+            testNum += addToTest;
             return null;
         }
     }

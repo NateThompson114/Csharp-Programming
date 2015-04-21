@@ -62,6 +62,8 @@
     <Compile Include="Programs\15%29 Generic Interface.cs" />
     <Compile Include="Programs\16%29 Generic Dictionarie.cs" />
     <Compile Include="Programs\17%29 Lambda.cs" />
+    <Compile Include="Programs\18%29 Person.cs" />
+    <Compile Include="Programs\18%29 Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -271,7 +271,8 @@ namespace Csharp_Programming
                         var newper2 = (_18__Person) nbf.Deserialize(readObject);
                         readObject.Close();
 
-                        Console.WriteLine("The file, person.person contains the name {0} {1}",newper2.fname,newper2.lname);
+                        Console.WriteLine("The file, person.person contains the name {0}" +
+                                          " {1}",newper2.fname,newper2.lname);
 
                         Ender(1);
                         break;

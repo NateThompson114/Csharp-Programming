@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp Class Library", "Csh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp Windows Form App - Browser", "Csharp Windows Form App - Browser\Csharp Windows Form App - Browser.csproj", "{CF75F66D-5BD7-445D-8E45-C31E7AE8C166}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp WindowsService", "Csharp WindowsService\Csharp WindowsService.csproj", "{B5307824-57B2-44D2-AFCD-61B8EA89A533}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CF75F66D-5BD7-445D-8E45-C31E7AE8C166}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF75F66D-5BD7-445D-8E45-C31E7AE8C166}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF75F66D-5BD7-445D-8E45-C31E7AE8C166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

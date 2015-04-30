@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp Windows Form App - B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp WindowsService", "Csharp WindowsService\Csharp WindowsService.csproj", "{B5307824-57B2-44D2-AFCD-61B8EA89A533}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp FirstDB", "FirstDB\Csharp FirstDB.csproj", "{8C2C5472-DAAC-4C13-B62C-A6C61BFBCA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp WebDBControl", "Csharp WebDBControl\Csharp WebDBControl.csproj", "{7ACC04BB-EB32-4724-AFCB-D41F686A6AF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5307824-57B2-44D2-AFCD-61B8EA89A533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2C5472-DAAC-4C13-B62C-A6C61BFBCA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2C5472-DAAC-4C13-B62C-A6C61BFBCA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2C5472-DAAC-4C13-B62C-A6C61BFBCA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2C5472-DAAC-4C13-B62C-A6C61BFBCA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACC04BB-EB32-4724-AFCB-D41F686A6AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACC04BB-EB32-4724-AFCB-D41F686A6AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACC04BB-EB32-4724-AFCB-D41F686A6AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACC04BB-EB32-4724-AFCB-D41F686A6AF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

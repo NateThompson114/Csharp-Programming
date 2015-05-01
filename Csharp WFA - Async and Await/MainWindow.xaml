@@ -1,0 +1,21 @@
+﻿<Window x:Class="Csharp_WFA___Async_and_Await.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="986">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="getHTML" Content="Get HTML" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="getHTML_Click"/>
+        <TextBox x:Name="target" Grid.Column="1" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="URL" VerticalAlignment="Top"/>
+        <RichTextBox x:Name="displayWindow" Grid.Column="1" HorizontalAlignment="Left" Height="272" Margin="10,38,0,0" VerticalAlignment="Top" Width="857">
+            <FlowDocument>
+                <Paragraph TextIndent="20">
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>

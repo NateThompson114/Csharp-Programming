@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using FirstDB;
 
 namespace Csharp_FirstDB
 {
@@ -22,8 +23,9 @@ namespace Csharp_FirstDB
             Console.WriteLine("3. XML Parse with Linq");
             Console.WriteLine("4. String Parse with Linq");
             Console.WriteLine("5. Linq to SQL");
-            Console.WriteLine("6. Details View Control");
+            Console.WriteLine("6. Creating Databases from Code");
             Console.WriteLine("7. BLANK");
+            Console.WriteLine("8. BLANK");
             var result = Console.ReadLine();
             try
             {
@@ -201,10 +203,30 @@ namespace Csharp_FirstDB
                         break;
                     case 6:
 
+                        Console.WriteLine("Enter a name to save");
+                        var name = Console.ReadLine();
+
+                        var dbase = new TableContext();
+                        using (dbase)
+                        {
+                            var tab = new PersonTable{Name = name};
+                            dbase.Person.Add(tab);
+                            dbase.SaveChanges();
+                            var searchDB = from p in dbase.Person orderby p.Name select p;
+                            foreach (var names in searchDB)
+                            {
+                                Console.WriteLine("The name is {0}", names.Name);
+                            }
+                        }
+
+                        Ender(1);
+                        break;
+                    case 7:
+
                         Ender(0);
                         Console.WriteLine("Option {0} is not implemented yet", userInput);
                         continue;
-                    case 7:
+                    case 8:
 
                         Ender(0);
                         Console.WriteLine("Option {0} is not implemented yet", userInput);

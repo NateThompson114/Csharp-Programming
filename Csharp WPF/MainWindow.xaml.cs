@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,42 @@ namespace Csharp_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (ops.SelectedIndex)
+            {
+                case 0:
+                    Divide();
+                    break;
+                case 1:
+                    Multiply();
+                    break;
+            }
+        }
+
+        private void Multiply()
+        {
+            var x = double.Parse(value1.Text);
+            var y = double.Parse(value2.Text);
+
+            if (y != 0)
+            {
+                results.Content = (x/y).ToString();
+            }
+            else
+            {
+                results.Content = "Division by zero not allowed";
+            }
+        }
+
+        private void Divide()
+        {
+            var x = double.Parse(value1.Text);
+            var y = double.Parse(value2.Text);
+
+            results.Content = (x*y).ToString();
         }
     }
 }

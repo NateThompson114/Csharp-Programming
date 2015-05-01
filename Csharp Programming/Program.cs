@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Csharp_Programming.Programs;
 using Csharp_Class_Library;
@@ -40,7 +41,7 @@ namespace Csharp_Programming
             Console.WriteLine("17. Lambda Expressions");
             Console.WriteLine("18. Serialization");
             Console.WriteLine("19. Event Log");
-            Console.WriteLine("20. BLANK");
+            Console.WriteLine("20. Threads");
             var result = Console.ReadLine();
             try
             {
@@ -291,6 +292,15 @@ namespace Csharp_Programming
                         Ender(1);
                         break;
 
+                    case 20:
+                        var program = new _20__Threads();
+                        var newthread = new Thread(new ThreadStart(program.Worker));
+                        newthread.Start();
+                        newthread.Join();
+                        Console.WriteLine("Back in main");
+
+                        Ender(1);
+                        break;
                     default:
                         Console.WriteLine("No option found");
                         Ender(0);

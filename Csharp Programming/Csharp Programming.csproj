@@ -64,6 +64,7 @@
     <Compile Include="Programs\17%29 Lambda.cs" />
     <Compile Include="Programs\18%29 Person.cs" />
     <Compile Include="Programs\18%29 Serializer.cs" />
+    <Compile Include="Programs\20%29 Threads.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
